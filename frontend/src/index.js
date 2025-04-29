@@ -31,7 +31,6 @@ import UserListPage from './pages/admin/UserListPage';
 import ProductEditPage from './pages/admin/ProductEditPage';
 import UserEditPage from './pages/admin/UserEditPage';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
-import { HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter(
@@ -67,13 +66,11 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
       <Provider store={store}>
         <PayPalScriptProvider deferLoading={true}>
           <RouterProvider router={router} />
         </PayPalScriptProvider>
       </Provider>
-    </HelmetProvider>
   </React.StrictMode>
 );
 
