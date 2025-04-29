@@ -9,7 +9,6 @@ import Message from '../components/Message';
 import {useState} from 'react';
 import {addToCart} from '../slices/cartSlice';
 import { toast } from 'react-toastify';
-import Meta from '../components/Meta';
 
 
 const ProductPage = () => {
@@ -57,7 +56,6 @@ const ProductPage = () => {
 	
 	return (
 		<>
-			<Meta title={product.name} />
 			<Link className="btn btn-light my-3" to="/">Go Back</Link>
 
 			<Row>

@@ -21,7 +21,6 @@ const OrderPage = () => {
 	const { data: paypal, isLoading: loadingPaypal, error:errorPaypal } = useGetPaypalClientIdQuery();
 
 	useEffect(() => {
-		clg('trying')
 		if (!errorPaypal && !loadingPaypal && paypal.clientId) {
 			console.log(paypal.clientId);
 			const loadPaypalScript = async () => {

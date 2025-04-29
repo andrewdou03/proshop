@@ -7,7 +7,6 @@ import Paginate from '../components/Paginate'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import ProductCarousel from '../components/ProductCarousel'
-import Meta from '../components/Meta'
 
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
 	<>
 	{!keyword ? <ProductCarousel/> : <Link to='/' className='btn btn-light'>Go Back</Link>}
 	{isLoading ? (<h2><Loader/></h2>) : error ? (<Message variant='danger'>{error?.data?.message || error.error}</Message>) :(<>
-		<Meta title="Hello"/>
 		<h1>Latest Products</h1>
 		<Row>
 			{data.products.map ((product) => (
